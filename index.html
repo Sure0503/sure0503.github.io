@@ -1,271 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title>MAARAN Airways</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Pacifico|Paytone+One" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="MAARAN-HomeCSSnew.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- link to your stylesheet -->
+    <style>
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 
 <body>
-
-  <!--NavBar-->
-	<nav class="navbar navbar-inverse">
-		<div class="container">
-			<div class="navbar-header">
-				<a href="#" class="navbar-brand"><img src="4b5d99c4-2f06-45be-88b2-5e4bb39f9885.png" id="logo"> MAARAN AIRWAYS</a>
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-	        		<span class="sr-only">Toggle navigation</span>
-	        		<span class="icon-bar"></span>
-	        		<span class="icon-bar"></span>
-	        		<span class="icon-bar"></span>
-	      </button>
-			</div>
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="#"><strong>Home</strong></a></li>
-					<li><a href="MAARAN-About.html"><strong>About</strong></a></li>
-					<li><a href="MAARAN-Contacts.html"><strong>Contacts</strong></a></li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#" data-toggle="modal" data-target="#signup"><strong>Sign up </strong><i class="fas fa-user-plus"></i></a></li>
-					<li><a href="#" data-toggle="modal" data-target="#login"><strong>Login </strong><i class="fas fa-user"></i></a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-  <!--NavBar End-->
-
-  <!--Heading/Moto-->
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<div id="content">
-					<h1>Your  Experience  Starts  Here!</h1>
-				</div>
-			</div>
-		</div>
-	</div>
-  <!--Heading/Moto End-->
-
-  <!--Tabs-->
-	<div class="container" id="second">
-    <!--Tabs Headings-->
-    <ul class="nav nav-tabs">
-      <li class="active"><a class="tabshead" data-toggle="tab" href="#home"><i class="fas fa-plane"></i> Flights</a></li>
-      <li><a class="tabshead" data-toggle="tab" href="#menu1"><i class="far fa-address-book"></i> My Bookings</a></li>
-      <li><a class="tabshead" data-toggle="tab" href="#menu2"><i class="far fa-clock"></i> Flight Status</a></li>
-    </ul>
-    <!--Tabs Headings End-->
-
-    <!--Tabs Content-->
-    <div class="tab-content">
-      <!--Tab Content Flight-->
-      <div id="home" class="tab-pane fade in active">
-        <h3 class="lab">Flights</h3>
-        <form action="MAARAN-HomeConn.html" method="POST"> 
-          <select name="origin" class="drop" id="ori">
-        	 <option value="Origin">Origin</option>
-        	 <option value="Mumbai">MUMBAI</option>
-        	 <option value="Delhi">DELHI</option>
-        	 <option value="Banglore">BANGLORE</option>
-        	 <option value="Kolkata">KOLKATA</option>
-          </select>
-          <i class="fas fa-exchange-alt"></i>
-          <select name="destination" class="drop" id="dest">
-          	<option value="Destination">Destination</option>
-          	<option value="Mumbai">MUMBAI</option>
-          	<option value="Delhi">DELHI</option>
-          	<option value="Banglore">BANGLORE</option>
-          	<option value="Kolkata">KOLKATA</option>
-          </select>
-          <input type="number" class="drop" name="passengers" step="1" min="1" max="10" placeholder="Number Of Passengers">
-          <span class="lab">Departure:</span>
-          <input type="date" name="depart" class="drop" id="depart">
-          <span class="lab">Return:</span>
-          <input type="date" name="return" class="drop" id="return">
-          <!-- <button type="button" name="submit" class="btn btn-default btn-lg">Search Flight</button> -->
-          <input type="submit" name="submit" id="flightsButton">
-        </form>
-      </div>
-      <!--Tab Content Flight End-->
-
-      <!--Tab Content My Bookings-->
-      <div id="menu1" class="tab-pane fade">
-        <h3 class="lab2">My Bookings</h3>
-        <form action="MAARAN-Ticket.html" method="POST">
-          <input type="text" name="ticketno" placeholder="Ticket Number" class="drop2">
-          <input type="text" name="lastname" placeholder="Passenger Last Name" class="drop2">
-          <input type="submit" name="submit" id="tickButton">
-        </form>
-    	</div>
-      <!--Tab Content My Bookings Ends-->
-
-      <!--Tab Content Flight Status-->
-      <div id="menu2" class="tab-pane fade">
-        <h3 class="lab2">Flight Status</h3>
-        <form action="MAARAN-FlightStatus.html" method="POST">
-          <input type="text" name="flightid" placeholder="Flight Number" class="drop2">
-          <select name="origin" class="drop2">.
-          	<option value="org">Origin</option>
-          	<option value="Mumbai">MUMBAI</option>
-          	<option value="Delhi">DELHI</option>
-          	<option value="Banglore">BANGLORE</option>
-          	<option value="Kolkata">KOLKATA</option>
-          </select>
-          <span class="lab2">Date:</span>
-          <input type="date" name="depart" class="drop21">
-          <input type="submit" name="submit" id="fsButton">
-        </form>
-      </div>
-      <!--Tab Content Flight Status Ends-->
+    <div class="video-container">
+        <video autoplay muted loop id="background-video">
+            <source src="./images/video.mp4" type="video/mp4">
+        </video>
     </div>
-    <!--Tab Contents End-->
-  </div>
-  <!--Tabs End-->
+    <a href="contact.html" class="hire-me-btn">Hire Me</a>
+    <header>
+        <!-- Navigation Bar -->
+        <nav class="navbar-container">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <div class="container">
+            <h2 class="title">
+                <span class="title-word">WELCOME</span>
+                <span class="title-word">TO OUR</span>
+                <span class="title-word">WEBSITE</span>
+            </h2>
+            <div class="button-container">
+                <a href="project.html" class="btn">Explore Projects</a>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-content">
+            <img src="images/pfp.jpg" alt="My Image" class="profile-picture">
+            <div class="about-text">
+                <h1>About Me</h1>
+                <hr>
+                <div id="p1" class="animate" data-animation-duration="2s" data-animation-delay="1s">
+                    <p>Meet Harvey, a dynamic full-stack developer hailing from the vibrant tech hub of San Francisco,
+                        California. With an unyielding passion for crafting cutting-edge digital experiences, Harvey
+                        stands at
+                        the forefront of innovation in web development and game design.
+                        As the mastermind behind HarveyDev Solutions, he brings to the table a wealth of expertise in
+                        creating
+                        immersive web applications and captivating game experiences that push the boundaries of what's
+                        possible.
+                    </p>
+                </div>
+                <br>
+                <div id="p2" class="animate" data-animation-duration="2s" data-animation-delay="1s">
+                    <p>Drawing inspiration from the ever-evolving landscape of technology, Harvey seamlessly integrates
+                        the
+                        latest tools and frameworks into his projects, ensuring they are not just functional but also
+                        future-proof. His dedication to staying abreast of emerging trends and technologies enables him
+                        to
+                        deliver solutions that are not only ahead of the curve but also tailored to meet the unique
+                        needs of his
+                        clients.
+                    </p>
+                </div>
+                <br>
+                <div id="p3" class="animate" data-animation-duration="2s" data-animation-delay="1s">
+                    <p>Whether it's developing robust backend systems, crafting intuitive user interfaces, or building
+                        captivating game mechanics, Harvey approaches each project with an unwavering commitment to
+                        excellence.
+                        His keen eye for detail, coupled with his knack for problem-solving, allows him to tackle even
+                        the most
+                        complex challenges with finesse. At HarveyDev Solutions, innovation knows no bounds. From
+                        dynamic web
+                        applications that streamline business processes to engaging game experiences that captivate
+                        audiences,
+                        Harvey is your go-to partner for bringing your digital vision to life. Join Harvey on a journey
+                        of
+                        limitless possibilities, where the only limit is your imagination.
+                    </p>
+                </div>
+            </div>
+        </div>
 
-  <!--SingUp Modal-->
-  <div id="signup" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-      <!--SignUp Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">SignUp</h4>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h2>About</h2>
+                <a href="#about">Learn more about us</a>
+            </div>
+            <div class="footer-section">
+                <h2>Projects</h2>
+                <a href="project.html">Check out our projects</a>
+            </div>
+            <div class="footer-section">
+                <h2>Experience</h2>
+                <a href="project.html#experience">View our experience</a>
+            </div>
         </div>
-        <div class="modal-body">
-          <form method="POST">
-          	<label for="username">Username:</label>
-            <input type="text" name="usernameSignUp" placeholder="Username" id="usernameSignUp">
-            <br>
-            <label for="email">Email ID:</label>
-            <input type="email" name="emailid" placeholder="Email Id" id="email">
-            <br>
-            <label for="pass">Password:</label>
-            <input type="password" name="passwordSignUp" id="passSignUp">
-            <br>
-            <label for="confpass">Confirm Password:</label>
-            <input type="password" name="confpassword" id="confpass">
-            <br>
-            <input type="Submit" name="submit" id="submitSignUp" value="SUBMIT">
-            <br>
-            <span id="messagecheck1"></span>
-            <br>
-            <span id="messagecheck2"></span>
-          </form>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Harvey Specter's Portfolio. All rights reserved.</p>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-      <!--SignUp Modal content End-->
-    </div>
-  </div>
-  <!--SignUp Modal End-->
+    </footer>
 
-  <!--Login Modal-->
-  <div id="login" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-      <!--Login Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Login</h4>
-        </div>
-        <div class="modal-body">
-          <form method="POST">
-            <label for="username">Username:</label>
-            <input type="text" name="usernameLogin" placeholder="Username" id="usernameLogin">
-            <br>
-            <label for="pass">Password:</label>
-            <input type="password" name="passwordLogin" id="passLogin">
-            <br>
-            <input type="Submit" name="submit" value="LOGIN">
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-      <!--Login Modal Content End-->
-    </div>
-  </div>
-  <!--Login Modal End-->
-  <script type="text/javascript" src="MAARAN-HomeJSnew.js"></script>
-</body>
-</html>
 
-<?php
-        error_reporting(0);
-        $dbhost="localhost";
-        $dbuser="devang";
-        $dbpass="qwerty";
-        $db="maaranairways";
-        $conn=mysqli_connect($dbhost,$dbuser,$dbpass,$db);
-        if(!$conn)
-        {
-          echo "Connection was failed".mysqli_connect_error();
-        }
-        $uname=$_POST['usernameSignUp'];
-        $uname=mysqli_real_escape_string($conn,$uname);
-        $em=$_POST['emailid'];
-        $em=mysqli_real_escape_string($conn,$em);
-        $passsign=$_POST['passwordSignUp'];
-        $passsign=mysqli_real_escape_string($conn,$passsign);
-        $confsign=$_POST['confpassword'];
-        $confsign=mysqli_real_escape_string($conn,$confsign);
-        $sbtn=$_POST['submit'];
-
-        $unamelg=$_POST['usernameLogin'];
-        $unamelg=mysqli_real_escape_string($conn,$unamelg);
-        $passlg=$_POST['passwordLogin'];
-        $passlg=mysqli_real_escape_string($conn,$passlg);
-        $lbtn=$_POST['submit'];
+    <script src="script.js"></script>
     
-        if(!empty($uname) && !empty($em) && !empty($passsign) && !empty($confsign) && $passsign==$confsign && $sbtn=="SUBMIT")
-        {
-          $sql="Insert into users values('".$uname."','".$em."','".$passsign."')";
-          if(mysqli_query($conn,$sql))
-          {
-            echo "Done";
-          }
-          else
-          {
-            echo "Something Went Wrong";
-          }
-        }
+</body>
 
-        if(!empty($unamelg) && !empty($passlg) && $lbtn=="LOGIN")
-        {
-          $sql="select username, password from users";
-          if(mysqli_query($conn,$sql))
-          {
-            $print=mysqli_query($conn,$sql);
-            while($row = mysqli_fetch_assoc($print))
-            {
-              if($row['username']==$unamelg && $row['password']==$passlg)
-              {
-                echo "<script type='text/javascript'>
-                      alert('Welcome');
-                      </script>";
-                $ch=1;
-              }
-            }
-            if($ch!=1)
-            {
-              echo "<script type='text/javascript'>
-                      alert('Invalid Credentials');
-                      </script>";
-            }
-          }
-          else
-          {
-            echo "Something Went Wrong";
-          }
-        }
-
-?>
+</html>

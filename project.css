@@ -1,0 +1,305 @@
+/* Reset default margin and padding */
+html{
+  scroll-behavior: smooth;
+}
+
+body, h1, h2, p, a, ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  background-image: url('images/bg2.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+.container{
+  height: 100vh;
+}
+
+main {
+  padding: 20px;
+}
+
+.catalogue {
+  margin-bottom: 40px;
+  text-align: center;
+  
+}
+
+.catalogue h2 {
+  font-size: 2em;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.catalogue ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.catalogue li {
+  background-color: #f0f0f0;
+  padding: 15px 25px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.catalogue li a {
+  color: #333;
+  display: block;
+  font-weight: bold;
+}
+
+.catalogue li:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Animation for the catalogue items */
+
+
+/* Project section styles */
+.project {
+  margin-bottom: 40px;
+  height: 50vh;
+  padding: 20px;
+  color:rgb(238, 228, 208);
+  background-color: rgb(67, 143, 173,0.5);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.project p {
+  margin-bottom: 10px;
+}
+
+.project a {
+  color: #bb2c2c;
+  background-color: #ccc;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.project a:hover {
+  background-color: #666;
+  color: #fff;
+}
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.project img {
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+#ss{
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+#fa{
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+
+.project .project-description {
+  flex: 1;
+}
+
+.project .project-description h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.project .project-description p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Keyframes for animations */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+.hire-me-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #ff6347;
+    color: #ffffff;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    z-index: 2;
+  }
+  
+  .hire-me-button:hover {
+    background-color: #ff4500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hire-me-button:active {
+    background-color: #ff3300;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+
+
+  /* General Section Styling */
+#experience {
+  font-family: Arial, sans-serif;
+  color: #100f0f;
+  background-color: rgb(240, 255, 255,0.5);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+#experience h2 {
+  text-align: center;
+  font-size: 2.5em;
+  color: rgb(0, 0, 0);
+  margin-bottom: 20px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+/* Timeline Styling */
+.timeline {
+  position: relative;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #ddd;
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: -7px;
+  width: 14px;
+  height: 14px;
+  background: #9ce24c;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item:nth-child(even)::before {
+  left: -7px;
+  right: auto;
+}
+
+.timeline-date {
+  font-size: 1.1em;
+  color: rgb(4, 6, 6);
+  margin-bottom: 5px;
+}
+
+.timeline-content {
+  background: rgb(136, 233, 213,0.4);
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
+  font-size: 1.5em;
+  margin: 0 0 10px;
+  color: #100d0d;
+}
+
+.timeline-content h4 {
+  font-size: 1.2em;
+  margin: 0 0 10px;
+  color: #0c0a0a;
+}
+
+.timeline-content p {
+  margin: 0;
+  line-height: 1.6;
+  color: #040303;
+}

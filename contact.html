@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="contact.css"> <!-- link to your stylesheet -->
+
+</head>
+
+<body>
+  <!-- Contact Section -->
+  <section id="contact">
+    <h1>Get in Touch</h1>
+    <div class="contact-container">
+      <div class="contact-form">
+        <form action="#" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" required>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button id="submit" type="submit">Send Message</button>
+        </form>
+      </div>
+      <div class="contact-details">
+        <h3>Contact Details</h3>
+        <p><strong>Address:</strong> 123 Street, City, Country</p>
+        <p><strong>Phone:</strong> +123 456 7890</p>
+        <p><strong>Email:</strong>
+          <a href="mailto:example@example.com">example@example.com</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="comment-container">
+    <div class="comment-scrolling-wrapper">
+      <ul class="comment-list">
+        <li class="comment-item">
+          <div class="client-name">John Doe</div>
+          <div class="client-feedback">“Working with Harvey Specter was an absolute pleasure. Their attention to detail,
+            problem-solving skills, and commitment to delivering high-quality work are commendable. I highly recommend
+            them for any web development project.”
+          </div>
+        </li>
+        <li class="comment-item">
+          <div class="client-name">Jane Smith</div>
+          <div class="client-feedback">“Harvey Specter is a true professional. They not only understand the technical
+            aspects of web development but also have a keen eye for design. Their ability to bridge the gap between
+            functionality and aesthetics is impressive.”</div>
+        </li>
+        <!-- Add more comment items as needed -->
+      </ul>
+    </div>
+  </div>
+
+  <script> // Add animation for feedback items on load
+    const feedbackItems = document.querySelectorAll('.feedback-item'); feedbackItems.forEach((item, index) => { item.style.animationDelay = `calc(0.2s * ${index + 1})`; });
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>

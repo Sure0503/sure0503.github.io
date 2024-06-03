@@ -1,0 +1,381 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+html {
+  margin: 0;
+  padding-top: 10px;
+  font-family: 'Arial', sans-serif;
+  
+  overflow-x: hidden;
+  /* Prevent horizontal overflow */
+}
+/*.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+#bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background: url('images/video.mp4') no-repeat center center fixed;
+  background-size: cover;
+  
+}
+*/
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Make sure it's behind other elements */
+}
+
+#background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* CSS */
+.hire-me-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  margin: 60px;
+  background-color: #315ccb;
+  color: #f5f5f3;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  z-index: 2;
+}
+
+.hire-me-btn:hover {
+  background-color: #DFBA69;
+  color: #000;
+}
+
+
+.navbar-container {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(8, 1, 48, 0.3);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  z-index: 1000;
+}
+
+.navbar-container ul {
+  list-style: none;
+  margin: 0;
+  padding: 220;
+  display: flex;
+}
+
+.navbar-container li {
+  margin: 0 30px;
+  margin-top: 40px;
+
+}
+
+.navbar-container a {
+  color: rgb(248, 248, 248);
+  background-color: transparent;
+  padding: 8px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar-container li :hover {
+  color: rgb(162, 89, 21);
+  text-decoration: none;
+  background: linear-gradient(35deg, hwb(238 46% 44%), #3d3d3d, #282020);
+  padding: 8px;
+  border-radius: 12px;
+}
+
+.container,
+.about-content {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  animation: ease-in;
+}
+
+.container {
+  margin: 40px;
+  background-size: cover;
+  background-attachment: fixed;
+  color: rgb(183, 36, 36);
+  animation: shade 3s infinite;
+  position: relative;
+  z-index: 1;
+}
+@keyframes shade {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.title {
+  font-size: 3em;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+.title-word {
+  color: #ffffff;
+  display: inline-block;
+  opacity: 0;
+  animation: fadeInBounce 3s infinite;
+}
+
+@keyframes fadeInBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  70% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: -20px;
+}
+
+.btn {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1em;
+  margin-top: 120px;
+  margin-left: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  opacity: 0;
+  animation: fadeIn 2s forwards 1s;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-5px);
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-picture {
+  /* Diamond shape for the profile picture */
+  position: relative;
+  width: 500px;
+  /* Adjust the width as needed */
+  height: 500px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  /* Adjust the height as needed */
+  background: url('images/pfp.jpg') no-repeat center center/cover;
+  /* Ensure the image fills the diamond */
+  clip-path: polygon(50% 0%,
+      100% 50%,
+      50% 100%,
+      0% 50%);
+  margin-right: 20px;
+  /* Add margin as needed */
+  animation: slideInFromLeft 1.5s ease-in-out forwards;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#about {
+  color: rgb(255, 255, 255);
+  border-radius: gray 5px;
+  animation: fade linear both;
+  animation-timeline: scroll();
+  animation-range: cover 20% 80%;
+  font-size: 17px;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#about.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.animate {
+  opacity: 0;
+  transform: translateY(-20px);
+  color: rgb(255, 254, 254);
+}
+
+.animate.active {
+  animation: fade-in 2s both;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#p1,
+#p2,
+#p3 {
+  background: linear-gradient(30deg, hsl(236, 54%, 33%), rgb(8, 164, 231), rgb(141, 180, 231));
+  padding: 12px;
+  animation: slideInFromRight 1.5s ease-in-out forwards;
+  border-radius: 55px;
+  display: grid;
+  width: fit-content;
+  justify-content: space-between;
+  margin-right: 20px;
+  /* Add margin as needed */
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+footer {
+  background-color: rgba(219, 206, 206, 0.3);
+  /* Transparent dark background color */
+  color: #fff;
+  /* Background color for the footer */
+  /* Text color for the footer */
+  text-align: center;
+  /* Center align text */
+  padding: 20px 0;
+  /* Padding for top and bottom */
+  width: 100%;
+  /* Make the footer span the full width of the viewport */
+  bottom: 0;
+  /* Align the footer to the bottom */
+  z-index: 2;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex-basis: calc(33.333% - 20px);
+  margin-bottom: 20px;
+}
+
+.footer-section h2 {
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-section a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .footer-section {
+    flex-basis: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-section {
+    flex-basis: 100%;
+  }
+}
